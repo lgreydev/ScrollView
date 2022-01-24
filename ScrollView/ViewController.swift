@@ -9,32 +9,39 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    private var imageScrollView: ImageScrollView!
     
+    private var urlAddress = "https://www.apple.com/newsroom/images/live-action/rosenthaler-strasse-store-opening/Apple_nso-rosenthaler-strasse_Hero_11302021_Full-Bleed-Image.jpg.large_2x.jpg"
     
-    @IBOutlet weak var scrollView: UIScrollView!
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
-        scrollView.contentSize = CGSize(width: 2880, height: 1620)
+        imageScrollView = ImageScrollView(frame: view.bounds)
+        view.addSubview(imageScrollView)
+        setupImageScrollView()
         
-        guard let url = URL(string: "https://www.apple.com/newsroom/images/live-action/rosenthaler-strasse-store-opening/Apple_nso-rosenthaler-strasse_Hero_11302021_Full-Bleed-Image.jpg.large_2x.jpg") else { return }
-        
+        guard let image = getImage(from: urlAddress) else { fatalError() }
+        self.imageScrollView.set(image: image)
+    }
+    
+    // MARK: - Private Methods
+    private func setupImageScrollView() {
+        imageScrollView.translatesAutoresizingMaskIntoConstraints = false
+        imageScrollView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        imageScrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        imageScrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        imageScrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+    }
+    
+    private func getImage(from address: String) -> UIImage? {
+        var image: UIImage!
+        guard let url = URL(string: address) else { fatalError() }
         do {
             let imageData = try Data(contentsOf: url)
-            guard let image = UIImage(data: imageData) else { fatalError() }
-            let imageView = UIImageView(image: image)
-            
-            scrollView.contentSize = imageView.frame.size
-            scrollView.minimumZoomScale = 0.1
-            scrollView.addSubview(imageView)
+            image = UIImage(data: imageData)
         } catch let errorData {
             print(errorData.localizedDescription)
         }
-        
-    
+        return image
     }
-
 }
