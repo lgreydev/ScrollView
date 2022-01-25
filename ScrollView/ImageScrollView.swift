@@ -19,10 +19,9 @@ class ImageScrollView: UIScrollView, UIScrollViewDelegate {
         configureFor(image.size)
     }
     
+    // MARK: - Private Methods
     private func configureFor(_ imageSize: CGSize) {
         self.contentSize = imageSize
-//        self.minimumZoomScale = 0.1
-//        self.maximumZoomScale = 5.0
         setCurrentMaxMinZoomScale()
     }
     
