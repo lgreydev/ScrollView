@@ -9,7 +9,7 @@ Interactive interaction with the picture, we can zoom and scroll.
 
 ### 🛡️ License
 
-This project is licensed under the MIT License - see the [`LICENSE`](https://github.com/lgreydev/Help/blob/master/License) file for details.
+This project is licensed under the MIT License - see the [`LICENSE`](https://github.com/lgreydev/ScrollView/blob/origin/License) file for details.
 
 ### 🙏 Support
 
