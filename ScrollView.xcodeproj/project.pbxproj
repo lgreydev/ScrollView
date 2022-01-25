@@ -14,6 +14,8 @@
 		5EDBDAEF279EDCD3006DF495 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EDBDAEE279EDCD3006DF495 /* Assets.xcassets */; };
 		5EDBDAF2279EDCD3006DF495 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EDBDAF0279EDCD3006DF495 /* LaunchScreen.storyboard */; };
 		5EDBDAFA279F282D006DF495 /* ImageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDBDAF9279F282D006DF495 /* ImageScrollView.swift */; };
+		5EDBDAFC27A0AD17006DF495 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5EDBDAFB27A0AD17006DF495 /* README.md */; };
+		5EDBDAFE27A0AE14006DF495 /* License in Resources */ = {isa = PBXBuildFile; fileRef = 5EDBDAFD27A0AE14006DF495 /* License */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		5EDBDAF1279EDCD3006DF495 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5EDBDAF3279EDCD3006DF495 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5EDBDAF9279F282D006DF495 /* ImageScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrollView.swift; sourceTree = "<group>"; };
+		5EDBDAFB27A0AD17006DF495 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5EDBDAFD27A0AE14006DF495 /* License */ = {isa = PBXFileReference; lastKnownFileType = text; path = License; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +46,8 @@
 		5EDBDAD9279EDCD1006DF495 = {
 			isa = PBXGroup;
 			children = (
+				5EDBDAFD27A0AE14006DF495 /* License */,
+				5EDBDAFB27A0AD17006DF495 /* README.md */,
 				5EDBDAE4279EDCD1006DF495 /* ScrollView */,
 				5EDBDAE3279EDCD1006DF495 /* Products */,
 			);
@@ -61,11 +67,11 @@
 				5EDBDAE5279EDCD1006DF495 /* AppDelegate.swift */,
 				5EDBDAE7279EDCD1006DF495 /* SceneDelegate.swift */,
 				5EDBDAE9279EDCD1006DF495 /* ViewController.swift */,
+				5EDBDAF9279F282D006DF495 /* ImageScrollView.swift */,
 				5EDBDAEB279EDCD1006DF495 /* Main.storyboard */,
 				5EDBDAEE279EDCD3006DF495 /* Assets.xcassets */,
 				5EDBDAF0279EDCD3006DF495 /* LaunchScreen.storyboard */,
 				5EDBDAF3279EDCD3006DF495 /* Info.plist */,
-				5EDBDAF9279F282D006DF495 /* ImageScrollView.swift */,
 			);
 			path = ScrollView;
 			sourceTree = "<group>";
@@ -130,6 +136,8 @@
 			files = (
 				5EDBDAF2279EDCD3006DF495 /* LaunchScreen.storyboard in Resources */,
 				5EDBDAEF279EDCD3006DF495 /* Assets.xcassets in Resources */,
+				5EDBDAFC27A0AD17006DF495 /* README.md in Resources */,
+				5EDBDAFE27A0AE14006DF495 /* License in Resources */,
 				5EDBDAED279EDCD1006DF495 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
