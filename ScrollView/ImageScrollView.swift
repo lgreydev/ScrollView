@@ -11,6 +11,25 @@ class ImageScrollView: UIScrollView, UIScrollViewDelegate {
 
     private var imageZoomView: UIImageView!
     
+    // MARK: - Initializers
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.delegate = self
+        self.showsVerticalScrollIndicator = false
+        self.showsHorizontalScrollIndicator = false
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Lifecycle
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.centerImage()
+    }
+    
+    // MARK: - Interface
     func set(image: UIImage) {
         imageZoomView?.removeFromSuperview()
         imageZoomView = nil
@@ -42,16 +61,25 @@ class ImageScrollView: UIScrollView, UIScrollViewDelegate {
         self.maximumZoomScale = maxScale
     }
     
-    // MARK: - Initializers
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        self.delegate = self
-        self.showsVerticalScrollIndicator = false
-        self.showsHorizontalScrollIndicator = false
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    private func centerImage() {
+        let boundsSize = self.bounds.size
+        var frameToCenter = imageZoomView.frame
+        
+        // width / y
+        if frameToCenter.size.width < boundsSize.width {
+            frameToCenter.origin.x = (boundsSize.width - frameToCenter.size.width) / 2
+        } else {
+            frameToCenter.origin.x = 0
+        }
+        
+        // height / x
+        if frameToCenter.size.height < boundsSize.height {
+            frameToCenter.origin.y = (boundsSize.height - frameToCenter.size.height) / 2
+        } else {
+            frameToCenter.origin.y = 0
+        }
+        
+        imageZoomView.frame = frameToCenter
     }
     
     // MARK: - UIScrollViewDelegate
