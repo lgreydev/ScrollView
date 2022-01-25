@@ -2,7 +2,7 @@
 
 Interactive interaction with the picture, we can zoom and scroll.
 
-**Work**
+**Documentation**
 > [`UIImageView`](https://developer.apple.com/documentation/uikit/uiimageview)<br>
 > [`UITapGestureRecognizer`](https://developer.apple.com/documentation/uikit/uitapgesturerecognizer)<br>
 > [`UIScrollView`](https://developer.apple.com/documentation/uikit/uiscrollview)<br>
